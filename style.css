@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('todo_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: url('quill 2.png') 32 32, auto; /* Increased cursor size */
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+}
+
+header .container {
+    height: 10vh;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.logo img {
+    height: 35px;
+    width: 35px;
+}
+
+.logo p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+}
+
+nav ul li {
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.main img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+.content {
+    position: relative;
+    width: 325px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.content .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo_value {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-right: 10px;
+    border-bottom: 2px solid rgba(16, 16, 114, 0.852);
+}
+
+.todo_checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.todo:has(.todo_checkbox:checked) {
+    color: rgba(16, 16, 114, 0.852);
+    background: rgba(0, 0, 0, 0.2);
+    text-decoration: line-through 1.5px;
+}
